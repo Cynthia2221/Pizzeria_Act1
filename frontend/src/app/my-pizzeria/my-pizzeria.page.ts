@@ -8,7 +8,7 @@ import { PizzaService } from '../services/pizza.service';
 })
 export class MyPizzeriaPage implements OnInit {
 
-  pizzas: any= [ ];
+  pizzas: any= [];
 
   constructor(private pizzaService: PizzaService) { }
 

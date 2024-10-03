@@ -16,10 +16,6 @@ const routes: Routes = [
     loadChildren: () => import('./my-pizzeria/my-pizzeria.module').then( m => m.MyPizzeriaPageModule)
   },
   {
-    path: 'my-pizzeria',
-    loadChildren: () => import('./my-pizzeria/my-pizzeria.module').then( m => m.MyPizzeriaPageModule)
-  },
-  {
     path: 'add-pizzas',
     loadChildren: () => import('./add-pizzas/add-pizzas.module').then( m => m.AddPizzasPageModule)
   },

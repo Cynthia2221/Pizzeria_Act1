@@ -10,6 +10,12 @@ exports.create = (req, res) => {
         telephone: req.body.telephone
     }
 
+    if (!pizza.address || !pizza.name || !pizza.telephone) {
+        return res.status(400).send({
+            message: "Todos los campos son obligatorios."
+        });
+    }
+
     Pizza.create(pizza).then((data) => {
         res.send(data);
     })

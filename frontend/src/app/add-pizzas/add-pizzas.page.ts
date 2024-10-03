@@ -27,12 +27,14 @@ export class AddPizzasPage implements OnInit {
       console.log("No es válido")
       return
     }
-
-    const address= this.pizzaForm.value.address;
-    const name= this.pizzaForm.value.name;
-    const telephone= this.pizzaForm.value.telephone;
-
-    this.pizzaService.create(address, name,telephone).subscribe((response) => {
+    
+    const pizza = {
+      address: this.pizzaForm.value.address,
+      name: this.pizzaForm.value.name,
+      telephone: this.pizzaForm.value.telephone
+    };
+    
+    this.pizzaService.create(pizza).subscribe((response) => {
       console.log("se creó la pizza");
       })
   }

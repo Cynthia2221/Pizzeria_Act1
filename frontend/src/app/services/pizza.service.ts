@@ -14,15 +14,15 @@ export class PizzaService {
     return this.httpClient.get(this.endpoint);
   }
 
-  create(address: string, name: string, telephone: string) {
+  create(pizza: any) {
     const headers = new HttpHeaders({
       'Content-Type': 'application/x-www-form-urlencoded'
     });
 
     const body = new URLSearchParams();
-    body.append("address", address);
-    body.append("name", name);
-    body.append("telephone", telephone);
+    body.append("address", pizza.address);
+    body.append("name", pizza.name);
+    body.append("telephone", pizza.telephone);
     
     return this.httpClient.post(this.endpoint, body.toString(), { headers }); // Convertir a string
   }

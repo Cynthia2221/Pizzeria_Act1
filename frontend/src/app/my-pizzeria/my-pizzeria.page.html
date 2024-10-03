@@ -5,11 +5,11 @@
 </ion-header>
 
 <ion-content>
-  <ion-item *ngFor="let pizza of pizzas">
+  <ion-item *ngFor="let s of pizzas">
     <ion-label>
-      <h1>{{ pizza.name }}</h1>
-      <p>{{ pizza.address }}</p>
-      <p>{{ pizza.telephone }}</p>
+      <h1>Name: {{s.name}}</h1>
+      <p>Address: {{s.address}}</p>
+      <p>Telephone: {{s.telephone}}</p>
     </ion-label>
   </ion-item>
 </ion-content>
