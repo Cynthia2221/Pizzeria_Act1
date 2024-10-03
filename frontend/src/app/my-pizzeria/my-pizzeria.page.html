@@ -4,12 +4,25 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-item *ngFor="let s of pizzas">
-    <ion-label>
-      <h1>Name: {{s.name}}</h1>
-      <p>Address: {{s.address}}</p>
-      <p>Telephone: {{s.telephone}}</p>
-    </ion-label>
-  </ion-item>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">pizzas-list</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div>
+    <p class="pizzas-list-header">Listado de pizzas</p>
+    <ion-list>
+      <ion-item *ngFor="let p of pizzas_a">
+        <ion-label>
+          <h1>name: {{p.name}}</h1>
+          <p>address: {{p.address}}</p>
+          <p>telephone: {{p.telephone}}</p>
+        </ion-label>
+        <!-- <ion-button (click)="goToDelete(s.id)">DELETE</ion-button> -->
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>
+
