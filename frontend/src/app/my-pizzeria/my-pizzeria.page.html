@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>my-pizzeria</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let pizza of pizzas">
+    <ion-label>
+      <h1>{{ pizza.name }}</h1>
+      <p>{{ pizza.address }}</p>
+      <p>{{ pizza.telephone }}</p>
+    </ion-label>
+  </ion-item>
+</ion-content>
