@@ -1,27 +1,48 @@
-#container {
+.header {
+  background-color: #ff6f61;
+}
+
+.toolbar {
+  --ion-toolbar-background: #ff6f61;
+  --ion-toolbar-color: #fff; 
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.content {
+  padding: 16px;
+  background-color: #f9f9f9;
+}
+
+.sub-header {
+  margin-top: 20px;
+}
+
+.sub-toolbar {
+  --ion-toolbar-background: #ffffff;
+}
+
+.sub-title {
+  font-size: 1.2rem;
+}
+
+.welcome-container {
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  margin: 30px 0;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.address {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+.show-pizzas-button {
+  margin-top: 20px;
+  background-color: #ff6f61;
+  color: #fff;
+  font-weight: bold;
 }

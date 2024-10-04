@@ -1,0 +1,67 @@
+.header {
+    background-color: #ff6f61; 
+  }
+  
+  .toolbar {
+    --ion-toolbar-background: #ff6f61; 
+    --ion-toolbar-color: #fff; 
+  }
+  
+  .title {
+    font-weight: bold;
+    font-size: 1.5rem; 
+  }
+  
+  .content {
+    padding: 16px;
+    background-color: #f9f9f9; 
+  }
+  
+  .pizza-form {
+    background: #fff; 
+    border-radius: 8px; 
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .form-list {
+    margin-bottom: 16px; 
+  }
+  
+  .form-item {
+    margin-bottom: 16px; 
+  }
+  
+  .input-field {
+    font-size: 1rem; 
+  }
+  
+  .radio-group {
+    margin-top: 16px; 
+  }
+  
+  .radio-label {
+    font-weight: bold;
+  }
+  
+  .radio-item {
+    margin: 8px 0; 
+  }
+  
+  .error-item {
+    color: #d9534f; 
+  }
+  
+  .error-message {
+    margin: 0; 
+    font-size: 0.9rem; 
+  }
+  
+  .submit-button {
+    margin-top: 20px; 
+  }
+  
+  .home-button {
+    margin-top: 10px; 
+  }
+  

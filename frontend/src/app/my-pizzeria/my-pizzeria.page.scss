@@ -1,0 +1,79 @@
+.header {
+    background-color: #ff6f61; // Color de fondo del encabezado
+  }
+  
+  .toolbar {
+    --ion-toolbar-background: #ff6f61; // Color de fondo del toolbar
+    --ion-toolbar-color: #fff; // Color del texto del toolbar
+  }
+  
+  .title {
+    font-weight: bold;
+    font-size: 1.5rem; // Tamaño de fuente para el título principal
+  }
+  
+  .content {
+    padding: 16px;
+    background-color: #f9f9f9; // Color de fondo del contenido
+  }
+  
+  .sub-header {
+    margin-top: 20px; // Espaciado superior para el sub-encabezado
+  }
+  
+  .sub-toolbar {
+    --ion-toolbar-background: #ffffff; // Color de fondo del sub-toolbar
+  }
+  
+  .sub-title {
+    font-size: 1.2rem; // Tamaño de fuente para el subtítulo
+  }
+  
+  .pizzas-list-container {
+    margin-top: 20px; // Espaciado superior para el contenedor de la lista de pizzas
+    text-align: center; // Centrar el texto
+  }
+  
+  .pizzas-list-header {
+    font-size: 1.8rem; // Tamaño de fuente para el encabezado de la lista de pizzas
+    font-weight: bold; // Negrita para el encabezado
+    margin-bottom: 20px; // Espaciado inferior para el encabezado
+  }
+  
+  .pizzas-list {
+    margin-bottom: 20px; // Espaciado inferior para la lista
+  }
+  
+  .pizza-item {
+    margin-bottom: 15px; // Espaciado inferior entre los ítems de pizza
+    background-color: #fff; // Fondo blanco para cada ítem
+    border-radius: 8px; // Bordes redondeados
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Sombra sutil
+  }
+  
+  .pizza-details {
+    padding: 16px; // Espaciado interno para el contenido de pizza
+  }
+  
+  .pizza-name {
+    font-size: 1.5rem; // Tamaño de fuente para el nombre de la pizza
+    margin-bottom: 4px; // Espaciado inferior
+  }
+  
+  .pizza-address,
+  .pizza-telephone {
+    font-size: 1rem; // Tamaño de fuente para dirección y teléfono
+    color: #555; // Color gris para dirección y teléfono
+  }
+  
+  .pizza-actions {
+    padding: 10px; // Espaciado interno para las acciones
+  }
+  
+  .add-pizza-button {
+    margin-top: 20px; // Espaciado superior para el botón de agregar pizza
+    background-color: #ff6f61; // Color de fondo del botón
+    color: #fff; // Color del texto del botón
+    font-weight: bold; // Negrita para el texto del botón
+  }
+  
