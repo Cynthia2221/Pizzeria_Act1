@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>update-pizzas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-input labelPlacement="stacked" placeholder="Pizza Name"></ion-input>
+    </ion-item>
+
+      <ion-radio-group>
+        <ion-label>Type</ion-label>
+        <ion-item *ngFor="let s of type">
+          <ion-radio>{{ s.name }}</ion-radio>
+        </ion-item>
+      </ion-radio-group>
+      <ion-button type="submit" (click)="updatePizza()"> Update </ion-button>
+  </ion-list>
+</ion-content>

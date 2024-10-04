@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PizzaService } from '../services/pizza.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-my-pizzeria',
@@ -10,47 +11,40 @@ export class MyPizzeriaPage implements OnInit {
 
   pizzas: any= [];
 
-  constructor(private pizzaService: PizzaService) { }
+  constructor(private pizzaService: PizzaService, private router: Router) { }
 
   ngOnInit() {
     this.getAllPizzas();
   }
 
-  pizzas_a: Array<any>= [
-    {
-      address:"c/ luján pérez",
-      name: "Pizza Rogerts",
-      telephone: "928676767",
-    
-    },
-    {
-      address:"c/ josé vélez",
-      name: "Domino's Pizza",
-      telephone: "928676767",
-    
-    },
-    {
-      address:"c/ juan rejón",
-      name: "Domino's Pizza",
-      telephone: "928676767",
-    
-    },
-  ]
+  ionViewWillEnter() {
+    this.getAllPizzas();
+  }
 
   getAllPizzas(){
     this.pizzaService.getPizzas().subscribe(response => {
+      console.log(response);
       this.pizzas= response;
     })
   }
 
-  // goToDelete(id: any){
-  // //   this.pizzaService.delete(id).subscribe(response => {
-  //         this.getAllPizzas();
-  //   })
-  // }
+  goToHomePage(){
+    this.router.navigateByUrl("/home")
+  }
 
-  // delete(id: any){
-  //   return this.httpClient.delete(`${this.serverUrl}/${id}`);
-  // }
+  goToPizzasUpdate(){
+    this.router.navigateByUrl("/update")
+  }
+
+  updatePizzas(s: any, index:number){
+    this.pizzaService.setCardId(index +1);
+    this.router.navigate(['/update-pizza-page']);
+  }
+
+  deletePizza(id: any) {
+    this.pizzaService.delete(id).subscribe((response) => {
+      this.getAllPizzas();
+    });
+  }
 
 }

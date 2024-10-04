@@ -1,43 +1,33 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>add-pizzas</ion-title>
+    <ion-title>Add Pizza</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">add-pizzas</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <!-- <ion-button (click)="createPizza('calle amargura','Pizza Rogerts', '928696969')">Crear una tienda de prueba</ion-button> -->
-
+<ion-content>
   <form [formGroup]="pizzaForm" (ngSubmit)="createPizza()">
-    <ion-item>
-      <ion-label position="floating">Address</ion-label>
-      <ion-input formControlName="address" type="text"></ion-input>
-    </ion-item>
-    <ion-note color="danger" *ngIf="getFormControl('address')?.hasError('required') && getFormControl('address')?.touched">
-      La dirección es obligatoria
-    </ion-note>
 
-    <ion-item>
-      <ion-label position="floating">Name</ion-label>
-      <ion-input formControlName="name" type="text"></ion-input>
-    </ion-item>
-    <ion-note color="danger" *ngIf="getFormControl('name')?.hasError('required') && getFormControl('name')?.touched">
-      El nombre es obligatorio
-    </ion-note>
+    <ion-list>
+      <ion-item>
+        <ion-input formControlName="name" type="name" fill="solid"
+          label="Name of the pizza" labelPlacement="floating"></ion-input>
+      </ion-item>
 
-    <ion-item>
-      <ion-label position="floating">Telephone</ion-label>
-      <ion-input formControlName="telephone" type="text"></ion-input>
-    </ion-item>
-    <ion-note color="danger" *ngIf="getFormControl('telephone')?.hasError('required') && getFormControl('telephone')?.touched">
-      El teléfono es obligatorio
-    </ion-note>
+      <ion-radio-group formControlName="type">
+        <ion-label>Type</ion-label>
+        <ion-item *ngFor="let s of type">
+          <ion-radio>{{ s.name }}</ion-radio>
+        </ion-item>
+      </ion-radio-group>
 
-    <ion-button type="submit" [disabled]="!pizzaForm.valid">Agregar pizza</ion-button>
+    </ion-list>
+    <ion-button (click)="createPizza()">Create</ion-button>
   </form>
+
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button expand="block" (click)="goToHome()"> Go to Home </ion-button>
+  </ion-toolbar>
+</ion-footer>
