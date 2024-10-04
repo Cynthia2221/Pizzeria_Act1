@@ -15,16 +15,12 @@ export class AddPizzasPage implements OnInit {
   type = [
     {
       id: 1,
-      name: 'Pizza Rogerts',
+      name: 'Margarita',
     },
     {
       id: 2,
-      name: 'Dominos Pizza',
+      name: 'Carbonara',
     },
-    {
-      id: 3,
-      name: 'La Magherita',
-    }
   ];
 
   trackItems(index: number, item: any) {
@@ -46,7 +42,7 @@ export class AddPizzasPage implements OnInit {
     if (this.pizzaForm.valid) {
       console.log('Es válida esta pizza', this.pizzaForm.value);
       this.pizzaService.createPizza(this.pizzaForm.value).subscribe((response) => {
-        this.router.navigate(['/all-pizzas']);
+        this.router.navigate(['/add-pizzas']);
       });
     } else {
       console.log('No es válido');

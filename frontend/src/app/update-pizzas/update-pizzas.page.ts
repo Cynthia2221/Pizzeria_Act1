@@ -33,7 +33,7 @@ export class UpdatePizzasPage implements OnInit {
 
   updatePizza(){
     this.pizzaService.update(this.card, this.pizza).subscribe((res: any) => {
-      this.router.navigate(['all-pizzas']);
+      this.router.navigate(['update-pizzas']);
     },
     (error:any)=> {
       console.error('error al actualizar', error)

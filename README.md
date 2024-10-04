@@ -21,7 +21,7 @@ Welcome to **My Pizzeria App**, a comprehensive solution for managing multiple p
 
 To explore and test the API endpoints for **My Pizzeria App**, you can use the following Postman collection:
 
-[Postman Collection - My Pizzeria API](https://www.postman.com/cynthia2003/workspace/Cynthia/collection/38432382-e703f1fc-05b1-4e01-ad69-9335ce1d4f27)
+[Postman Collection - My Pizzeria API](https://www.postman.com/cynthia2003/workspace/cynthia2)
 
 ## 📄 **API Overview**
 

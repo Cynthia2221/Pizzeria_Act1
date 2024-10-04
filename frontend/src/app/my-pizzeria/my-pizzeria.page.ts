@@ -9,8 +9,7 @@ import { Router } from '@angular/router';
 })
 export class MyPizzeriaPage implements OnInit {
 
-  pizzas: any= [];
-
+  pizzas: any = [];
   constructor(private pizzaService: PizzaService, private router: Router) { }
 
   ngOnInit() {
@@ -21,23 +20,28 @@ export class MyPizzeriaPage implements OnInit {
     this.getAllPizzas();
   }
 
-  getAllPizzas(){
+  getAllPizzas() {
     this.pizzaService.getPizzas().subscribe(response => {
-      console.log(response);
-      this.pizzas= response;
-    })
-  }
+        console.log("Pizzas después de la eliminación:", response);
+        this.pizzas = response;
+    });
+}
 
-  goToHomePage(){
+  goToHomePage() {
     this.router.navigateByUrl("/home")
   }
 
-  goToPizzasUpdate(){
-    this.router.navigateByUrl("/update")
+  goToPizzasUpdate(id: any) {
+    this.pizzaService.setCardId(id);
+    this.router.navigateByUrl("/update-pizzas")
   }
 
-  updatePizzas(s: any, index:number){
-    this.pizzaService.setCardId(index +1);
+  goToCreatePizza() {
+    this.router.navigateByUrl("/add-pizzas");
+}
+
+  updatePizzas(s: any, index: number) {
+    this.pizzaService.setCardId(index + 1);
     this.router.navigate(['/update-pizza-page']);
   }
 
@@ -46,5 +50,4 @@ export class MyPizzeriaPage implements OnInit {
       this.getAllPizzas();
     });
   }
-
 }

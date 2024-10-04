@@ -18,11 +18,11 @@ const routes: Routes = [
   {
     path: 'add-pizzas',
     loadChildren: () => import('./add-pizzas/add-pizzas.module').then( m => m.AddPizzasPageModule)
-  },  {
+  },
+  {
     path: 'update-pizzas',
     loadChildren: () => import('./update-pizzas/update-pizzas.module').then( m => m.UpdatePizzasPageModule)
   },
-
 ];
 
 @NgModule({

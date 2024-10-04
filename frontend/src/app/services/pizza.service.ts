@@ -34,17 +34,17 @@ export class PizzaService {
     return this.selectedCardId;
   }
 
-  createPizza(pizza: any){
-    const headers= new HttpHeaders({
-      'Content-Type': 'application/json',
+  createPizza(pizza: any) {
+    const headers = new HttpHeaders({
+        'Content-Type': 'application/json',
     });
 
     return this.httpClient.post(this.endpoint, JSON.stringify(pizza), {
-      headers,
+        headers,
     });
-  };
+}
 
-  delete(id: any){
+  delete(id: number){
     return this.httpClient.delete(`${this.endpoint}/${id}`);
   }
 
